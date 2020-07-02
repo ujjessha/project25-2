@@ -11,24 +11,15 @@ function preload()
 }
 
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(1600, 700);
 
 
 	engine = Engine.create();
 	world = engine.world;
 
-	//packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:1.5, isStatic:false});
-	//World.add(world, packageBody);
-	
-
-	//Create a Ground
-	//ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
-	 //World.add(world, ground);
-	 
-	 paper1=new Paper(150,650,30,30);
+	 paper1=new Paper(150,650,70);
 	 dustbin1=new Dustbin(1200,650);
-	 ground1=new Ground(400,657,800,10);
-	
+	 ground1=new Ground(800,670,1600,10);
 	Engine.run(engine);
 
 
@@ -37,7 +28,7 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(0);
+  background(255);
   paper1.display();
   dustbin1.display();
   ground1.display();
@@ -50,7 +41,7 @@ function draw() {
 
 function keyPressed(){
 	if (keyCode=== UP_ARROW){
-		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:85,y:-85});
+		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:300,y:-300});
 	}
 }
  
