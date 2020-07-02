@@ -25,9 +25,9 @@ class Paper{
     imageMode(CENTER);
     strokeWeight(3);
     fill(255,0,255)
-    image(this.image,0,0,this,height,this.weight);
-    translate(pos.x, pos.y);
-    ellipse(0,0,this.r,this.r);
+    translate(pos.x, pos.y)
+    image(this.image,0,0,this.r,this.r);
+   
     pop();
 
 }
